@@ -9,6 +9,9 @@ function getTime(data) {
     localStorage.setItem('videoplayer-current-time', time)
 }
 const localTime = localStorage.getItem('videoplayer-current-time')
+if (localTime) {
+  player.setCurrentTime(localTime);
+}
 
 player.setCurrentTime(localTime)
 
