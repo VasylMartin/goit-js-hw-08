@@ -13,6 +13,4 @@ if (localTime) {
   player.setCurrentTime(localTime);
 }
 
-player.setCurrentTime(localTime)
-
 player.on('timeupdate', throttle(getTime, 1000))
