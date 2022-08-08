@@ -19,6 +19,11 @@ function onInput() {
 function onFormSubmit(event) {
     event.preventDefault()
 
+    if (event.currentTarget.email.value == 0 || event.currentTarget.message.value == 0) {
+        alert("Fill the form")
+        return false
+    }
+
     dataForm.email = event.currentTarget.email.value
     dataForm.message = event.currentTarget.message.value
     console.log(dataForm)
